@@ -29,10 +29,10 @@ class AddImageForm(forms.Form):
 def AddImage(request):
     if request.method == 'POST':
         form = AddImageForm(request.POST, request.FILES)
-            if form.is_valid():
-                i=Image(title=form.cleaned_data['title'], desc=form.cleaned_data['desc'], file=form.cleaned_data['file'])
-                i.save()
-                return HttpResponseRedirect('/')
+        if form.is_valid():
+            i=Image(title=form.cleaned_data['title'], desc=form.cleaned_data['desc'], file=form.cleaned_data['file'])
+            i.save()
+            return HttpResponseRedirect('/')
             else:
                 form=AddImageForm()
     return render_to_response('form.html', {'form': form, })
