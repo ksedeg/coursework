@@ -1,0 +1,43 @@
+body{
+      background:#fffddf;
+}
+ul {
+	width:960px;
+	margin:0 auto;
+}
+
+ul li {
+	float:left;
+	width:320px;
+	text-align:center;
+	list-style:none;
+}
+
+ul li img {
+	width: 300px;
+}
+
+.link {
+	width:960px;
+	text-align:center;
+	font-size:20px;
+	margin:20px auto;
+}
+
+form {
+	width:400px;
+	margin:0 auto;
+}
+
+form p label {
+	width:100px;
+	float:left;
+	line-height:26px;
+	text-align:right;
+	padding:0 20px;
+}
+
+input[type="submit"] {
+	margin:0 auto;
+	display:block;
+}

@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Gallery</title>
+		<meta charset="utf-8" />
+		<link href="{% static 'style.css' %}" rel="stylesheet" />
+		<script type="text/javascript" src="{% static 'jquery-1.10.1.min.js' %}"></script>
+		<link rel="stylesheet" href="{% static 'jquery.fancybox.css' %}" type="text/css" media="screen" />
+		<script type="text/javascript" src="{% static 'jquery.fancybox.pack.js' %}"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".fancybox").fancybox();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="link"><a href="/form">Add image</a></div>
+		{% if images %}
+			<ul>
+				{% for image in images%}
+				<li>
+					<a class="fancybox" href="/media/{{ image.file }}" rel="group"><img src="/media/{{ image.file }}" width="300" alt="{{ image.title }}" /></a>
+					<h2>{{ image.title }}</h2>
+					<p>{{ image.desc }}</p>
+				</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>No images are available.</p>
+		{% endif %}
+	</body>
+</html>

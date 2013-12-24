@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Add image</title>
+		<link href="{% static 'style.css' %}" rel="stylesheet" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<div class="link"><a href="/">Go to gallery</a></div>
+		<form enctype="multipart/form-data" method="post" action="/form/">{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
