@@ -7,4 +7,3 @@ class ImageAdmin(admin.ModelAdmin):
     list_display = ('title', 'desc', 'file')
 
 admin.site.register(Image, ImageAdmin)
-

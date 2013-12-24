@@ -37,4 +37,4 @@ def AddImage(request):
                 form=AddImageForm()
     return render_to_response('form.html', {
         'form': form,
-    })	
+    })
