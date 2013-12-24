@@ -36,5 +36,4 @@ def AddImage(request):
             else:
                 form=AddImageForm()
     return render_to_response('form.html', {
-        'form': form,
-    })
+        'form': form,})
